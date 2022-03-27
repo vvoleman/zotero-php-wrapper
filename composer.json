@@ -1,6 +1,6 @@
 {
-	"name": "vvoleman/zotero_api",
-	"description": "Zotero API wrapper",
+	"name": "vvoleman/zotero-php-wrapper",
+	"description": "Zotero API wrapper for PHP",
 	"type": "library",
 	"license": "MIT",
 	"autoload": {
