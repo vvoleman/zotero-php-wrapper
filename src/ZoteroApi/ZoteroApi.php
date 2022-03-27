@@ -1,0 +1,205 @@
+<?php
+
+namespace vvoleman\ZoteroApi;
+
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Psr7\Response;
+use Psr\Http\Client\ClientExceptionInterface;
+use Psr\Http\Message\ResponseInterface;
+use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
+use vvoleman\ZoteroApi\Exceptions\ZoteroAccessDeniedException;
+use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
+use vvoleman\ZoteroApi\Exceptions\ZoteroConnectionException;
+use vvoleman\ZoteroApi\Exceptions\ZoteroInvalidChainingException;
+use vvoleman\ZoteroApi\Source\AbstractSource;
+
+class ZoteroApi
+{
+
+    /**
+     * URL Link used for all requests
+     */
+    public const API_ENDPOINT = "https://api.zotero.org";
+
+    /**
+     * API Key to authenticate request
+     *
+     * @var string
+     */
+    private string $apiKey;
+
+    /**
+     * Version of Zotero's API
+     *
+     * @var string
+     */
+    private string $version = "3";
+
+    /**
+     * Request's timeout
+     *
+     * @var int
+     */
+    private int $timeout = 0;
+
+    /**
+     * Source of data
+     *
+     * @var AbstractSource
+     */
+    private AbstractSource $source;
+
+    /**
+     * Endpoint
+     *
+     * @var AbstractEndpoint
+     */
+    private AbstractEndpoint $endpoint;
+
+    private ResponseInterface $response;
+
+    /**
+     * HTTP Client
+     *
+     * @var Client
+     */
+    private ClientInterface $client;
+
+    public function __construct(string $apiKey, AbstractSource $source)
+    {
+        $this->apiKey = $apiKey;
+        $this->source = $source;
+
+        $this->client = new Client([
+            'base_url' => self::API_ENDPOINT
+        ]);
+    }
+
+    /**
+     * Sets HTTP client
+     *
+     * @param ClientInterface $client
+     * @return $this
+     */
+    public function setClient(ClientInterface $client): self
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Returns API's version
+     *
+     * @return int
+     */
+    public function getVersion(): int
+    {
+        return $this->version;
+    }
+
+    /**
+     * Sets endpoint to link
+     * @param AbstractEndpoint $endpoint
+     * @return $this self-reference for chaining
+     * @throws ZoteroInvalidChainingException
+     */
+    public function setEndpoint(AbstractEndpoint $endpoint): self
+    {
+        if (!$this->source->canBeUsedWith($endpoint)) {
+            throw new ZoteroInvalidChainingException(
+                sprintf("Unable to chain endpoint %s with source %s", $endpoint::class, $this->source::class)
+            );
+        }
+        $this->endpoint = $endpoint;
+
+        return $this;
+    }
+
+    /**
+     * Runs request with selected options
+     *
+     * @throws ZoteroBadRequestException
+     */
+    public function run(): self
+    {
+        try {
+            $this->response = $this->client->get(
+                ((string)$this)."www",
+                [
+                    "timeout" => $this->timeout,
+                    "headers" => [
+                        "Authorization" => "Bearer " . $this->apiKey,
+                        "Zotero-API-Version" => $this->version
+                    ]
+                ]
+            );
+        } catch (ClientExceptionInterface $e) {
+            $msg = sprintf("ZoteroAPI error: %s",$e->getMessage());
+            switch ($e->getCode()){
+                case 0:
+                    throw new ZoteroConnectionException($msg);
+                case 403:
+                    throw new ZoteroAccessDeniedException($msg);
+            }
+        }catch (\Exception $e){
+            throw new ZoteroBadRequestException(sprintf("ZoteroAPI error: %s",$e->getMessage()));
+        }
+
+        return $this;
+    }
+
+    /**
+     * Returns headers of response
+     *
+     * @return array
+     * @throws ZoteroBadRequestException
+     */
+    public function getHeaders(): array
+    {
+        if (!isset($this->response)) {
+            throw new ZoteroBadRequestException();
+        }
+
+        return $this->response->getHeaders();
+    }
+
+    /**
+     * Returns body of response
+     *
+     * @return array
+     * @throws ZoteroBadRequestException
+     */
+    public function getBody(): array
+    {
+        if (!$this->response) {
+            throw new ZoteroBadRequestException();
+        }
+
+        return json_decode($this->response->getBody());
+    }
+
+    /**
+     * Turns its contents into URL link
+     * @return string
+     */
+    public function __toString(): string
+    {
+        $url = self::API_ENDPOINT;
+
+        // Source
+        $url .= $this->source;
+
+        // Endpoint
+        if(isset($this->endpoint)){
+            $url .= $this->endpoint->getURLPath();
+        }
+
+        return $url;
+    }
+
+
+}

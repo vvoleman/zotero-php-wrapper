@@ -1,0 +1,36 @@
+{
+	"name": "vvoleman/zotero_api",
+	"description": "Zotero API wrapper",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"vvoleman\\ZoteroApi\\": "src/ZoteroApi"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"vvoleman\\ZoteroApi\\Tests\\": "tests/"
+		}
+	},
+	"authors": [
+		{
+			"name": "vvoleman",
+			"email": "vvoleman@seznam.cz"
+		}
+	],
+	"scripts": {
+		"testdox-unit": "./vendor/bin/phpunit --bootstrap vendor/autoload.php --group Unit --testdox --colors=always tests/",
+		"testdox-integration": "./vendor/bin/phpunit --bootstrap vendor/autoload.php --group Integration --testdox --colors=always tests/"
+	},
+	"require": {
+		"php": "^8.0",
+		"guzzlehttp/guzzle": "^7.0",
+		"vlucas/phpdotenv": "^5.4"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.5",
+		"phpstan/phpstan": "^1.4",
+		"symfony/var-dumper": "^6.0"
+	}
+}
