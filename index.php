@@ -2,15 +2,24 @@
 
 use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
 use vvoleman\ZoteroApi\Endpoint\Collections;
-use vvoleman\ZoteroApi\Source\UsersSource;
-use vvoleman\ZoteroApi\Tests\Mock\MockClient;
+use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
+use vvoleman\ZoteroApi\Source\KeysSource;
 use vvoleman\ZoteroApi\ZoteroApi;
 
 require_once "vendor/autoload.php";
 
-$api = (new ZoteroApi("abcd", new UsersSource("uuuiiiddd")))
-    ->addEndpoint(new Collections(AbstractEndpoint::ALL))
-    ->setClient(new MockClient())
-    ->run();
+$dotenv = \Dotenv\Dotenv::createImmutable(".",[".env.test.local"],true);
+$dotenv->safeLoad();
+try {
+    $api = (new ZoteroApi($_ENV["API_KEY"], new \vvoleman\ZoteroApi\Source\UsersSource(9200014)))
+        ->setEndpoint((new Collections("HH8ENUPI"))->setEndpoint(new \vvoleman\ZoteroApi\Endpoint\Items(AbstractEndpoint::ALL)))
+        ->run();
+} catch (ZoteroBadRequestException | Exception $e) {
+    dd($e);
+}
 
-dd($api->getHeaders());
+try {
+    dd($api->getBody());
+} catch (Exception $e) {
+    dd($e);
+}

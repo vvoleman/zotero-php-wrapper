@@ -7,7 +7,10 @@ use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
 use vvoleman\ZoteroApi\Endpoint\Collections;
 use vvoleman\ZoteroApi\Endpoint\Items;
 use vvoleman\ZoteroApi\Endpoint\Tags;
+use vvoleman\ZoteroApi\Exceptions\ZoteroAccessDeniedException;
 use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
+use vvoleman\ZoteroApi\Exceptions\ZoteroConnectionException;
+use vvoleman\ZoteroApi\Exceptions\ZoteroEndpointNotFoundException;
 use vvoleman\ZoteroApi\Exceptions\ZoteroInvalidChainingException;
 use vvoleman\ZoteroApi\Source\AbstractSource;
 use vvoleman\ZoteroApi\Source\GroupsSource;
@@ -37,8 +40,27 @@ class ZoteroApiTest extends TestCase
      */
     public function testGetHeaders(ZoteroApi $api, string $url)
     {
+        $api->run();
         $this->assertIsArray($api->getHeaders(), "Headers type");
         $this->assertEquals($api->getVersion(), $api->getHeaders()["Zotero-API-Version"][0], "API Version");
+
+        $api = $this->getApiInstance();
+        $this->expectException(ZoteroBadRequestException::class);
+        $api->getHeaders();
+    }
+
+    /**
+     * @dataProvider zoteroApiProvider
+     */
+    public function testGetBody(ZoteroApi $api)
+    {
+        $api->run();
+        $this->assertEquals("HH8ENUPI",$api->getBody()["key"]);
+        $this->assertIsArray($api->getBody(),"ZoteroApi::getBody() should return assoc array");
+
+        $api = $this->getApiInstance();
+        $this->expectException(ZoteroBadRequestException::class);
+        $api->getBody();
     }
 
     /**
@@ -49,13 +71,18 @@ class ZoteroApiTest extends TestCase
     {
         return [
             [
-                (new ZoteroApi("abcd", new UsersSource("uuuiiiddd")))
-                    ->setEndpoint(new Collections(AbstractEndpoint::ALL))
-                    ->setClient(new MockClient())
-                    ->run(),
+                $this->getApiInstance(),
                 ZoteroApi::API_ENDPOINT . "/users/uuuiiiddd/collections"
             ]
         ];
+    }
+
+    private function getApiInstance(): ZoteroApi
+    {
+        $api = (new ZoteroApi(rand(1000,5000), new UsersSource("uuuiiiddd")))
+            ->setEndpoint(new Collections(AbstractEndpoint::ALL))
+            ->setClient(new MockClient());
+        return $api;
     }
 
     public function endpointsProvider(): array

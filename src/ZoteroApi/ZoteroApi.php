@@ -13,6 +13,7 @@ use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
 use vvoleman\ZoteroApi\Exceptions\ZoteroAccessDeniedException;
 use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
 use vvoleman\ZoteroApi\Exceptions\ZoteroConnectionException;
+use vvoleman\ZoteroApi\Exceptions\ZoteroEndpointNotFoundException;
 use vvoleman\ZoteroApi\Exceptions\ZoteroInvalidChainingException;
 use vvoleman\ZoteroApi\Source\AbstractSource;
 
@@ -122,13 +123,16 @@ class ZoteroApi
     /**
      * Runs request with selected options
      *
-     * @throws ZoteroBadRequestException
+     * @throws ZoteroBadRequestException Unable to perform request (general exception)
+     * @throws ZoteroEndpointNotFoundException Endpoint doesn't exists
+     * @throws ZoteroConnectionException Unable to connect to Zotero Zotero endpoint
+     * @throws ZoteroAccessDeniedException Access denied / Invalid API key
      */
     public function run(): self
     {
         try {
             $this->response = $this->client->get(
-                ((string)$this)."www",
+                ((string)$this),
                 [
                     "timeout" => $this->timeout,
                     "headers" => [
@@ -139,14 +143,15 @@ class ZoteroApi
             );
         } catch (ClientExceptionInterface $e) {
             $msg = sprintf("ZoteroAPI error: %s",$e->getMessage());
-            switch ($e->getCode()){
-                case 0:
-                    throw new ZoteroConnectionException($msg);
-                case 403:
-                    throw new ZoteroAccessDeniedException($msg);
-            }
+            $code = $e->getCode();
+            throw match ($code) {
+                0 => new ZoteroConnectionException($msg, $code),
+                403 => new ZoteroAccessDeniedException($msg, $code),
+                404 => new ZoteroEndpointNotFoundException($msg, $code),
+                default => new ZoteroBadRequestException($msg, $code),
+            };
         }catch (\Exception $e){
-            throw new ZoteroBadRequestException(sprintf("ZoteroAPI error: %s",$e->getMessage()));
+            throw new ZoteroBadRequestException(sprintf("ZoteroAPI error: %s",$e->getMessage(),$e->getCode()));
         }
 
         return $this;
@@ -175,11 +180,11 @@ class ZoteroApi
      */
     public function getBody(): array
     {
-        if (!$this->response) {
-            throw new ZoteroBadRequestException();
+        if (!isset($this->response)) {
+            throw new ZoteroBadRequestException("Response doesn't exist.");
         }
 
-        return json_decode($this->response->getBody());
+        return json_decode($this->response->getBody(),true)[0];
     }
 
     /**
