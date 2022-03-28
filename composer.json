@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"autoload": {
 		"psr-4": {
-			"vvoleman\\ZoteroApi\\": "src/ZoteroApi"
+			"vvoleman\\ZoteroApi\\": "src/ZoteroApi",
+			"vvoleman\\ZoteroApi\\Tests\\": "tests/"
 		}
 	},
 	"autoload-dev": {
