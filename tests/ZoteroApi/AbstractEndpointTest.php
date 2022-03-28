@@ -1,17 +1,17 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Tests;
+namespace ZoteroApi\Tests;
 
 use PHPUnit\Framework\TestCase;
-use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
-use vvoleman\ZoteroApi\Endpoint\Collections;
-use vvoleman\ZoteroApi\Endpoint\Items;
-use vvoleman\ZoteroApi\Endpoint\Publications;
-use vvoleman\ZoteroApi\Endpoint\Tags;
-use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroInvalidChainingException;
-use vvoleman\ZoteroApi\Source\AbstractSource;
-use vvoleman\ZoteroApi\Source\UsersSource;
+use ZoteroApi\Endpoint\AbstractEndpoint;
+use ZoteroApi\Endpoint\Collections;
+use ZoteroApi\Endpoint\Items;
+use ZoteroApi\Endpoint\Publications;
+use ZoteroApi\Endpoint\Tags;
+use ZoteroApi\Exceptions\ZoteroBadRequestException;
+use ZoteroApi\Exceptions\ZoteroInvalidChainingException;
+use ZoteroApi\Source\AbstractSource;
+use ZoteroApi\Source\UsersSource;
 
 class AbstractEndpointTest extends TestCase
 {

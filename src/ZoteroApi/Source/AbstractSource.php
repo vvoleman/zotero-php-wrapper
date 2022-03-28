@@ -1,9 +1,9 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Source;
+namespace ZoteroApi\Source;
 
-use vvoleman\ZoteroApi\Core\AbstractURLPart;
-use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
+use ZoteroApi\Core\AbstractURLPart;
+use ZoteroApi\Endpoint\AbstractEndpoint;
 
 abstract class AbstractSource extends AbstractURLPart
 {

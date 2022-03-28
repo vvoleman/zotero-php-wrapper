@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ruleset name="My Project">
+    <!-- Specify directory that composer.json is placed. Usually it would be
+    project root directory. -->
+    <arg name="basepath" value="."/>
+
+    <!-- Relative path to your ruleset.xml -->
+<!--    <rule ref="vendor/suin/phpcs-psr4-sniff/src/Suin"/>-->
+
+</ruleset>

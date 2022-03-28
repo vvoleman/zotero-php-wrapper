@@ -1,10 +1,10 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Endpoint;
+namespace ZoteroApi\Endpoint;
 
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowCollections;
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowGroupsSource;
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowUsersSource;
+use ZoteroApi\Core\EndpointLogic\CanFollowCollections;
+use ZoteroApi\Core\EndpointLogic\CanFollowGroupsSource;
+use ZoteroApi\Core\EndpointLogic\CanFollowUsersSource;
 
 class Collections extends AbstractEndpoint implements CanFollowCollections, CanFollowGroupsSource, CanFollowUsersSource
 {

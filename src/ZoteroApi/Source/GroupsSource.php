@@ -1,9 +1,9 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Source;
+namespace ZoteroApi\Source;
 
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowGroupsSource;
-use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
+use ZoteroApi\Core\EndpointLogic\CanFollowGroupsSource;
+use ZoteroApi\Endpoint\AbstractEndpoint;
 
 class GroupsSource extends AbstractSource
 {

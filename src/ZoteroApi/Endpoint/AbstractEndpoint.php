@@ -1,9 +1,9 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Endpoint;
+namespace ZoteroApi\Endpoint;
 
-use vvoleman\ZoteroApi\Core\AbstractURLPart;
-use vvoleman\ZoteroApi\Exceptions\ZoteroInvalidChainingException;
+use ZoteroApi\Core\AbstractURLPart;
+use ZoteroApi\Exceptions\ZoteroInvalidChainingException;
 
 abstract class AbstractEndpoint extends AbstractURLPart
 {

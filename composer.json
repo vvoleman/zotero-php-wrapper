@@ -5,8 +5,8 @@
 	"license": "MIT",
 	"autoload": {
 		"psr-4": {
-			"vvoleman\\ZoteroApi\\": "src/ZoteroApi",
-			"vvoleman\\ZoteroApi\\Tests\\": "tests/"
+			"ZoteroApi\\": "src/ZoteroApi",
+			"ZoteroApi\\Tests\\": "tests/"
 		}
 	},
 	"authors": [
@@ -25,8 +25,10 @@
 		"vlucas/phpdotenv": "^5.4"
 	},
 	"require-dev": {
+		"squizlabs/php_codesniffer": "3.*",
 		"phpunit/phpunit": "^9.5",
 		"phpstan/phpstan": "^1.4",
-		"symfony/var-dumper": "^6.0"
+		"symfony/var-dumper": "^6.0",
+		"suin/phpcs-psr4-sniff": "^3.0"
 	}
 }

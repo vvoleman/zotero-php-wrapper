@@ -1,9 +1,9 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Source;
+namespace ZoteroApi\Source;
 
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowKeysSource;
-use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
+use ZoteroApi\Core\EndpointLogic\CanFollowKeysSource;
+use ZoteroApi\Endpoint\AbstractEndpoint;
 
 class KeysSource extends AbstractSource
 {

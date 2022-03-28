@@ -1,6 +1,6 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Exceptions;
+namespace ZoteroApi\Exceptions;
 
 class ZoteroBadRequestException extends \Exception
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Core\EndpointLogic;
+namespace ZoteroApi\Core\EndpointLogic;
 
 interface CanFollowPublications
 {

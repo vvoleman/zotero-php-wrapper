@@ -1,14 +1,14 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Tests\ZoteroApi;
+namespace ZoteroApi\Tests\ZoteroApi;
 
 use Dotenv\Dotenv;
-use vvoleman\ZoteroApi\Exceptions\ZoteroAccessDeniedException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroConnectionException;
-use vvoleman\ZoteroApi\Source\KeysSource;
-use vvoleman\ZoteroApi\Source\UsersSource;
-use vvoleman\ZoteroApi\ZoteroApi;
+use ZoteroApi\Exceptions\ZoteroAccessDeniedException;
+use ZoteroApi\Exceptions\ZoteroBadRequestException;
+use ZoteroApi\Exceptions\ZoteroConnectionException;
+use ZoteroApi\Source\KeysSource;
+use ZoteroApi\Source\UsersSource;
+use ZoteroApi\ZoteroApi;
 
 /**
  * @

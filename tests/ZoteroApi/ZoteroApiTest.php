@@ -1,23 +1,23 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Tests;
+namespace ZoteroApi\Tests;
 
 use PHPUnit\Framework\TestCase;
-use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
-use vvoleman\ZoteroApi\Endpoint\Collections;
-use vvoleman\ZoteroApi\Endpoint\Items;
-use vvoleman\ZoteroApi\Endpoint\Tags;
-use vvoleman\ZoteroApi\Exceptions\ZoteroAccessDeniedException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroConnectionException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroEndpointNotFoundException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroInvalidChainingException;
-use vvoleman\ZoteroApi\Source\AbstractSource;
-use vvoleman\ZoteroApi\Source\GroupsSource;
-use vvoleman\ZoteroApi\Source\KeysSource;
-use vvoleman\ZoteroApi\Source\UsersSource;
-use vvoleman\ZoteroApi\Tests\Mock\MockClient;
-use vvoleman\ZoteroApi\ZoteroApi;
+use ZoteroApi\Endpoint\AbstractEndpoint;
+use ZoteroApi\Endpoint\Collections;
+use ZoteroApi\Endpoint\Items;
+use ZoteroApi\Endpoint\Tags;
+use ZoteroApi\Exceptions\ZoteroAccessDeniedException;
+use ZoteroApi\Exceptions\ZoteroBadRequestException;
+use ZoteroApi\Exceptions\ZoteroConnectionException;
+use ZoteroApi\Exceptions\ZoteroEndpointNotFoundException;
+use ZoteroApi\Exceptions\ZoteroInvalidChainingException;
+use ZoteroApi\Source\AbstractSource;
+use ZoteroApi\Source\GroupsSource;
+use ZoteroApi\Source\KeysSource;
+use ZoteroApi\Source\UsersSource;
+use ZoteroApi\Tests\Mock\MockClient;
+use ZoteroApi\ZoteroApi;
 
 class ZoteroApiTest extends TestCase
 {

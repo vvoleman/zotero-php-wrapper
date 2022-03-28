@@ -1,8 +1,10 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Tests\Mock;
+namespace ZoteroApi\Tests\Mock;
 
-class MockResponse implements \Psr\Http\Message\ResponseInterface
+use Psr\Http\Message\ResponseInterface;
+
+class MockResponse implements ResponseInterface
 {
 
     /**

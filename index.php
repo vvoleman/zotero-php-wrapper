@@ -1,5 +1,6 @@
 <?php
 
+use Dotenv\Dotenv;
 use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
 use vvoleman\ZoteroApi\Endpoint\Collections;
 use vvoleman\ZoteroApi\Endpoint\Items;
@@ -10,7 +11,7 @@ use vvoleman\ZoteroApi\ZoteroApi;
 
 require_once "vendor/autoload.php";
 
-$dotenv = \Dotenv\Dotenv::createImmutable(".", [".env.test.local"], true);
+$dotenv = Dotenv::createImmutable(".", [".env.test.local"], true);
 $dotenv->safeLoad();
 try {
     $api = (new ZoteroApi($_ENV["API_KEY"], new UsersSource(9200014)))

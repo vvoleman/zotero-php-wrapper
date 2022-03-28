@@ -1,9 +1,9 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Endpoint;
+namespace ZoteroApi\Endpoint;
 
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowItems;
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowTags;
+use ZoteroApi\Core\EndpointLogic\CanFollowItems;
+use ZoteroApi\Core\EndpointLogic\CanFollowTags;
 
 class Tags extends AbstractEndpoint implements CanFollowItems
 {

@@ -1,9 +1,10 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Endpoint;
+namespace ZoteroApi\Endpoint;
 
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowGroupsSource;
-use vvoleman\ZoteroApi\Core\EndpointLogic\CanFollowUsersSource;
+use ZoteroApi\Core\EndpointLogic\CanFollowGroupsSource;
+use ZoteroApi\Core\EndpointLogic\CanFollowPublications;
+use ZoteroApi\Core\EndpointLogic\CanFollowUsersSource;
 
 class Publications extends AbstractEndpoint implements CanFollowGroupsSource, CanFollowUsersSource
 {
@@ -21,6 +22,6 @@ class Publications extends AbstractEndpoint implements CanFollowGroupsSource, Ca
      */
     protected function checkEndpoint(AbstractEndpoint $endpoint): bool
     {
-        // TODO: Implement checkEndpoint() method.
+        return $endpoint instanceof CanFollowPublications;
     }
 }

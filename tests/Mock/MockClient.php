@@ -1,6 +1,6 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Tests\Mock;
+namespace ZoteroApi\Tests\Mock;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

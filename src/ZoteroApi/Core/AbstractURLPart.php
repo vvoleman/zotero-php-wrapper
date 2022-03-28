@@ -1,6 +1,6 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Core;
+namespace ZoteroApi\Core;
 
 abstract class AbstractURLPart
 {

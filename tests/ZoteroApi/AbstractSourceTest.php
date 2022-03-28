@@ -1,16 +1,16 @@
 <?php
 
-namespace vvoleman\ZoteroApi\Tests;
+namespace ZoteroApi\Tests;
 
 use PHPUnit\Framework\TestCase;
-use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
-use vvoleman\ZoteroApi\Endpoint\Collections;
-use vvoleman\ZoteroApi\Endpoint\Tags;
-use vvoleman\ZoteroApi\Source\AbstractSource;
-use vvoleman\ZoteroApi\Source\GroupsSource;
-use vvoleman\ZoteroApi\Source\KeysSource;
-use vvoleman\ZoteroApi\Source\UsersSource;
-use vvoleman\ZoteroApi\ZoteroApi;
+use ZoteroApi\Endpoint\AbstractEndpoint;
+use ZoteroApi\Endpoint\Collections;
+use ZoteroApi\Endpoint\Tags;
+use ZoteroApi\Source\AbstractSource;
+use ZoteroApi\Source\GroupsSource;
+use ZoteroApi\Source\KeysSource;
+use ZoteroApi\Source\UsersSource;
+use ZoteroApi\ZoteroApi;
 
 
 class AbstractSourceTest extends TestCase

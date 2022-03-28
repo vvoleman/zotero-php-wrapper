@@ -1,6 +1,6 @@
 <?php
 
-namespace vvoleman\ZoteroApi;
+namespace ZoteroApi;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -9,13 +9,13 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\ResponseInterface;
-use vvoleman\ZoteroApi\Endpoint\AbstractEndpoint;
-use vvoleman\ZoteroApi\Exceptions\ZoteroAccessDeniedException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroBadRequestException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroConnectionException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroEndpointNotFoundException;
-use vvoleman\ZoteroApi\Exceptions\ZoteroInvalidChainingException;
-use vvoleman\ZoteroApi\Source\AbstractSource;
+use ZoteroApi\Endpoint\AbstractEndpoint;
+use ZoteroApi\Exceptions\ZoteroAccessDeniedException;
+use ZoteroApi\Exceptions\ZoteroBadRequestException;
+use ZoteroApi\Exceptions\ZoteroConnectionException;
+use ZoteroApi\Exceptions\ZoteroEndpointNotFoundException;
+use ZoteroApi\Exceptions\ZoteroInvalidChainingException;
+use ZoteroApi\Source\AbstractSource;
 
 class ZoteroApi
 {

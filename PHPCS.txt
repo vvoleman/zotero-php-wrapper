@@ -1,0 +1,371 @@
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Source/AbstractSource.php
+-----------------------------------------------------------------------------------
+FOUND 8 ERRORS AFFECTING 7 LINES
+-----------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing doc comment for class AbstractSource
+ 11 | ERROR | [ ] Missing doc comment for function __construct()
+ 11 | ERROR | [x] Opening brace should be on a new line
+ 15 | ERROR | [ ] Missing doc comment for function getKey()
+ 20 | ERROR | [ ] Missing doc comment for function getURLName()
+ 22 | ERROR | [ ] Missing doc comment for function canBeUsedWith()
+-----------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Source/GroupsSource.php
+-----------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 5 LINES
+-----------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing doc comment for class GroupsSource
+ 11 | ERROR | [ ] Missing doc comment for function getURLName()
+ 16 | ERROR | [ ] Missing doc comment for function canBeUsedWith()
+-----------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Source/UsersSource.php
+-----------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 5 LINES
+-----------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing doc comment for class UsersSource
+ 10 | ERROR | [ ] Missing doc comment for function getURLName()
+ 15 | ERROR | [ ] Missing doc comment for function canBeUsedWith()
+-----------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Source/KeysSource.php
+-----------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 5 LINES
+-----------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing doc comment for class KeysSource
+ 11 | ERROR | [ ] Missing doc comment for function getURLName()
+ 16 | ERROR | [ ] Missing doc comment for function canBeUsedWith()
+-----------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Exceptions/ZoteroAccessDeniedException.php
+----------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for class ZoteroAccessDeniedException
+----------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Exceptions/ZoteroBadRequestException.php
+--------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+--------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for class ZoteroBadRequestException
+--------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Exceptions/ZoteroInvalidChainingException.php
+-------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+-------------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for class ZoteroInvalidChainingException
+-------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Exceptions/ZoteroConnectionException.php
+--------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+--------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for class ZoteroConnectionException
+--------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Exceptions/ZoteroEndpointNotFoundException.php
+--------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+--------------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for class ZoteroEndpointNotFoundException
+--------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Endpoint/Publications.php
+-------------------------------------------------------------------------------------
+FOUND 8 ERRORS AND 1 WARNING AFFECTING 7 LINES
+-------------------------------------------------------------------------------------
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR   | [ ] Missing file doc comment
+  9 | ERROR   | [ ] Missing doc comment for class Publications
+  9 | WARNING | [ ] Line exceeds 85 characters; contains 98 characters
+ 12 | ERROR   | [ ] Missing short description in doc comment
+ 14 | ERROR   | [ ] Missing @return tag in function comment
+ 20 | ERROR   | [ ] Missing short description in doc comment
+ 20 | ERROR   | [ ] Doc comment for parameter "$endpoint" missing
+ 22 | ERROR   | [ ] Missing @return tag in function comment
+-------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Endpoint/Items.php
+-----------------------------------------------------------------------------------------------------
+FOUND 11 ERRORS AND 1 WARNING AFFECTING 10 LINES
+-----------------------------------------------------------------------------------------------------
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR   | [ ] Missing file doc comment
+ 11 | ERROR   | [ ] Missing doc comment for class Items
+ 11 | WARNING | [ ] Line exceeds 85 characters; contains 115 characters
+ 17 | ERROR   | [ ] Missing short description in doc comment
+ 19 | ERROR   | [ ] Missing @return tag in function comment
+ 25 | ERROR   | [ ] Missing short description in doc comment
+ 25 | ERROR   | [ ] Doc comment for parameter "$endpoint" missing
+ 27 | ERROR   | [ ] Missing @return tag in function comment
+ 31 | ERROR   | [x] Multi-line function call not indented correctly; expected 12 spaces but found 16
+ 32 | ERROR   | [x] Multi-line function call not indented correctly; expected 12 spaces but found 16
+ 33 | ERROR   | [x] Multi-line function call not indented correctly; expected 8 spaces but found 12
+-----------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Endpoint/Collections.php
+-------------------------------------------------------------------------------------
+FOUND 10 ERRORS AND 2 WARNINGS AFFECTING 8 LINES
+-------------------------------------------------------------------------------------
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR   | [ ] Missing file doc comment
+  9 | ERROR   | [ ] Missing doc comment for class Collections
+  9 | WARNING | [ ] Line exceeds 85 characters; contains 119 characters
+ 12 | ERROR   | [ ] Missing short description in doc comment
+ 14 | ERROR   | [ ] Missing @return tag in function comment
+ 20 | ERROR   | [ ] Missing short description in doc comment
+ 20 | ERROR   | [ ] Doc comment for parameter "$endpoint" missing
+ 23 | ERROR   | [x] Additional blank lines found at end of doc comment
+ 23 | ERROR   | [ ] Missing @return tag in function comment
+ 26 | ERROR   | [x] No space found after comma in argument list
+ 26 | WARNING | [ ] Line exceeds 85 characters; contains 124 characters
+-------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Endpoint/Tags.php
+-----------------------------------------------------------------------------------
+FOUND 8 ERRORS AFFECTING 7 LINES
+-----------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR | [ ] Missing file doc comment
+  8 | ERROR | [ ] Missing doc comment for class Tags
+ 11 | ERROR | [ ] Missing short description in doc comment
+ 13 | ERROR | [ ] Missing @return tag in function comment
+ 19 | ERROR | [ ] Missing short description in doc comment
+ 19 | ERROR | [ ] Doc comment for parameter "$endpoint" missing
+ 21 | ERROR | [ ] Missing @return tag in function comment
+-----------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Endpoint/AbstractEndpoint.php
+----------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 19 ERRORS AND 2 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR   | [ ] Missing file doc comment
+  8 | ERROR   | [ ] Missing doc comment for class AbstractEndpoint
+ 17 | ERROR   | [ ] Missing doc comment for function __construct()
+ 17 | ERROR   | [x] Opening brace should be on a new line
+ 28 | ERROR   | [ ] Missing short description in doc comment
+ 31 | ERROR   | [x] Opening brace should be on a new line
+ 34 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 34 | ERROR   | [x] There must be a single space between the closing parenthesis and the opening brace of a multi-line IF statement; found 0 spaces
+ 44 | ERROR   | [ ] Missing parameter comment
+ 44 | ERROR   | [x] Tag value for @param tag indented incorrectly; expected 2 spaces but found 1
+ 45 | ERROR   | [ ] Tag @return cannot be grouped with parameter tags in a doc comment
+ 46 | ERROR   | [ ] Tag @throws cannot be grouped with parameter tags in a doc comment
+ 46 | WARNING | [ ] Line exceeds 85 characters; contains 88 characters
+ 50 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 50 | ERROR   | [x] There must be a single space between the closing parenthesis and the opening brace of a multi-line IF statement; found 0 spaces
+ 51 | ERROR   | [x] No space found after comma in argument list
+ 51 | WARNING | [ ] Line exceeds 85 characters; contains 111 characters
+ 62 | ERROR   | [ ] Missing parameter comment
+ 62 | ERROR   | [x] Tag value for @param tag indented incorrectly; expected 2 spaces but found 1
+ 63 | ERROR   | [ ] Tag @return cannot be grouped with parameter tags in a doc comment
+----------------------------------------------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 8 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/ZoteroApi.php
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 29 ERRORS AND 3 WARNINGS AFFECTING 26 LINES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+   1 | ERROR   | [x] End of line character is invalid; expected "\n" but found "\r\n"
+   2 | ERROR   | [ ] Missing file doc comment
+  20 | ERROR   | [ ] Missing doc comment for class ZoteroApi
+  33 | ERROR   | [ ] Private member variable "apiKey" must be prefixed with an underscore
+  40 | ERROR   | [ ] Private member variable "version" must be prefixed with an underscore
+  47 | ERROR   | [ ] Private member variable "timeout" must be prefixed with an underscore
+  54 | ERROR   | [ ] Private member variable "source" must be prefixed with an underscore
+  61 | ERROR   | [ ] Private member variable "endpoint" must be prefixed with an underscore
+  63 | ERROR   | [ ] Private member variable "response" must be prefixed with an underscore
+  70 | ERROR   | [ ] Private member variable "client" must be prefixed with an underscore
+  72 | ERROR   | [ ] Missing doc comment for function __construct()
+  77 | ERROR   | [x] Opening parenthesis of a multi-line function call must be the last content on the line
+  79 | ERROR   | [x] Closing parenthesis of a multi-line function call must be on a line by itself
+  85 | ERROR   | [ ] Missing parameter comment
+  85 | ERROR   | [x] Tag value for @param tag indented incorrectly; expected 2 spaces but found 1
+  86 | ERROR   | [ ] Tag @return cannot be grouped with parameter tags in a doc comment
+ 107 | ERROR   | [x] There must be exactly one blank line before the tags in a doc comment
+ 107 | ERROR   | [ ] Missing parameter comment
+ 107 | ERROR   | [x] Tag value for @param tag indented incorrectly; expected 2 spaces but found 1
+ 108 | ERROR   | [ ] Tag @return cannot be grouped with parameter tags in a doc comment
+ 109 | ERROR   | [ ] Tag @throws cannot be grouped with parameter tags in a doc comment
+ 115 | WARNING | [ ] Line exceeds 85 characters; contains 109 characters
+ 126 | WARNING | [ ] Line exceeds 85 characters; contains 86 characters
+ 130 | ERROR   | [ ] Missing @return tag in function comment
+ 145 | ERROR   | [x] No space found after comma in argument list
+ 154 | ERROR   | [x] No space found after comma in argument list
+ 154 | ERROR   | [x] No space found after comma in argument list
+ 154 | WARNING | [ ] Line exceeds 85 characters; contains 111 characters
+ 187 | ERROR   | [x] No space found after comma in argument list
+ 192 | ERROR   | [x] There must be exactly one blank line before the tags in a doc comment
+ 202 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...){\n"
+ 202 | ERROR   | [x] There must be a single space between the closing parenthesis and the opening brace of a multi-line IF statement; found 0 spaces
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 12 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/EndpointLogic/CanFollowKeysSource.php
+----------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for interface CanFollowKeysSource
+----------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/EndpointLogic/CanFollowGroupsSource.php
+------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+------------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for interface CanFollowGroupsSource
+------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/EndpointLogic/CanFollowItems.php
+-----------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+-----------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for interface CanFollowItems
+-----------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/EndpointLogic/CanFollowCollections.php
+-----------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+-----------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for interface CanFollowCollections
+-----------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/EndpointLogic/CanFollowPublications.php
+------------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+------------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for interface CanFollowPublications
+------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/EndpointLogic/CanFollowTags.php
+----------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+----------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for interface CanFollowTags
+----------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/EndpointLogic/CanFollowUsersSource.php
+-----------------------------------------------------------------------------------------------------
+FOUND 3 ERRORS AFFECTING 3 LINES
+-----------------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found "\r\n"
+ 2 | ERROR | [ ] Missing file doc comment
+ 5 | ERROR | [ ] Missing doc comment for interface CanFollowUsersSource
+-----------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------
+
+
+FILE: /home/themulti/PHP/zotero-php-wrapper/src/ZoteroApi/Core/AbstractURLPart.php
+-------------------------------------------------------------------------------------
+FOUND 8 ERRORS AND 1 WARNING AFFECTING 7 LINES
+-------------------------------------------------------------------------------------
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found "\r\n"
+  2 | ERROR   | [ ] Missing file doc comment
+  5 | ERROR   | [ ] Missing doc comment for class AbstractURLPart
+ 10 | ERROR   | [ ] Missing doc comment for function __construct()
+ 15 | ERROR   | [ ] Missing doc comment for function getURLName()
+ 17 | ERROR   | [ ] Missing doc comment for function __toString()
+ 19 | ERROR   | [x] No space found after comma in argument list
+ 19 | ERROR   | [x] No space found after comma in argument list
+ 19 | WARNING | [ ] Line exceeds 85 characters; contains 107 characters
+-------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------------
+
+Time: 95ms; Memory: 8MB
+
