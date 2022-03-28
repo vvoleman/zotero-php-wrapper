@@ -9,11 +9,6 @@
 			"vvoleman\\ZoteroApi\\Tests\\": "tests/"
 		}
 	},
-	"autoload-dev": {
-		"psr-4": {
-			"vvoleman\\ZoteroApi\\Tests\\": "tests/"
-		}
-	},
 	"authors": [
 		{
 			"name": "vvoleman",

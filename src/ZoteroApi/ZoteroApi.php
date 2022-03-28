@@ -184,7 +184,7 @@ class ZoteroApi
             throw new ZoteroBadRequestException("Response doesn't exist.");
         }
 
-        return json_decode($this->response->getBody(),true)[0];
+        return json_decode($this->response->getBody(),true);
     }
 
     /**

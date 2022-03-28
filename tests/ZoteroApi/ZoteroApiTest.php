@@ -55,7 +55,7 @@ class ZoteroApiTest extends TestCase
     public function testGetBody(ZoteroApi $api)
     {
         $api->run();
-        $this->assertEquals("HH8ENUPI",$api->getBody()["key"]);
+        $this->assertEquals("ABCDEFG",$api->getBody()["key"]);
         $this->assertIsArray($api->getBody(),"ZoteroApi::getBody() should return assoc array");
 
         $api = $this->getApiInstance();
